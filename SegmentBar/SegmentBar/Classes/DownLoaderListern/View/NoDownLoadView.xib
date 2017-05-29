@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NoDownLoadView">
+            <rect key="frame" x="0.0" y="0.0" width="236" height="231"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Apl-Jz-Wvf">
+                    <rect key="frame" x="88" y="166" width="60" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="91i-kp-QZe"/>
+                        <constraint firstAttribute="height" constant="30" id="jsc-Wj-Tcn"/>
+                    </constraints>
+                    <state key="normal" title="去看看">
+                        <color key="titleColor" red="0.2627450980392157" green="0.2627450980392157" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="click:" destination="iN0-l3-epB" eventType="touchUpInside" id="J3C-4G-eZk"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noData_download" translatesAutoresizingMaskIntoConstraints="NO" id="21T-kY-rtk">
+                    <rect key="frame" x="43" y="0.0" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="2AE-SC-MaI"/>
+                        <constraint firstAttribute="width" constant="150" id="4tN-G5-nmJ"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.95686274509803926" green="0.95294117647058818" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Apl-Jz-Wvf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2U1-v1-drP"/>
+                <constraint firstItem="21T-kY-rtk" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ojr-Ra-d1b"/>
+                <constraint firstItem="Apl-Jz-Wvf" firstAttribute="top" secondItem="21T-kY-rtk" secondAttribute="bottom" constant="16" id="PEB-bQ-ctM"/>
+                <constraint firstItem="21T-kY-rtk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="o0M-6t-2xg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="NoDownImage" destination="21T-kY-rtk" id="Dvd-kH-Pba"/>
+            </connections>
+            <point key="canvasLocation" x="-40" y="-119.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="noData_download" width="500" height="560"/>
+    </resources>
+</document>
