@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA1347211EDF0A6F003C2C62 /* SegmentBarConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1347201EDF0A6F003C2C62 /* SegmentBarConfig.m */; };
 		DAD55D9F1EDA773D0030BC10 /* NoDownLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD55D9E1EDA773D0030BC10 /* NoDownLoadView.m */; };
 		DAD55DA11EDA77540030BC10 /* NoDownLoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAD55DA01EDA77540030BC10 /* NoDownLoadView.xib */; };
 		DAD55DA41EDA7A370030BC10 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD55DA31EDA7A370030BC10 /* UIView+Extension.m */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA13471F1EDF0A6F003C2C62 /* SegmentBarConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentBarConfig.h; sourceTree = "<group>"; };
+		DA1347201EDF0A6F003C2C62 /* SegmentBarConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentBarConfig.m; sourceTree = "<group>"; };
 		DAD55D9D1EDA773D0030BC10 /* NoDownLoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoDownLoadView.h; sourceTree = "<group>"; };
 		DAD55D9E1EDA773D0030BC10 /* NoDownLoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoDownLoadView.m; sourceTree = "<group>"; };
 		DAD55DA01EDA77540030BC10 /* NoDownLoadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoDownLoadView.xib; sourceTree = "<group>"; };
@@ -153,6 +156,8 @@
 				DAD55DA31EDA7A370030BC10 /* UIView+Extension.m */,
 				DAD55DA51EDA7A760030BC10 /* SegmentBar.h */,
 				DAD55DA61EDA7A760030BC10 /* SegmentBar.m */,
+				DA13471F1EDF0A6F003C2C62 /* SegmentBarConfig.h */,
+				DA1347201EDF0A6F003C2C62 /* SegmentBarConfig.m */,
 			);
 			path = SegmentBar;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAD55DA41EDA7A370030BC10 /* UIView+Extension.m in Sources */,
+				DA1347211EDF0A6F003C2C62 /* SegmentBarConfig.m in Sources */,
 				DAEA35871EDA72AC006F5257 /* AppDelegate.m in Sources */,
 				DAEA35891EDA72AC006F5257 /* main.m in Sources */,
 				DAEA358D1EDA733F006F5257 /* DownLoadListerMainVC.m in Sources */,

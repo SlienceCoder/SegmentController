@@ -8,8 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface SegmentBar : UIView
 
 
+/**
+ 快速创建一个选项卡控件
 
+ @param frame frame
+ @return 选项卡控件
+
+ */
++ (instancetype)segmentBarWithFrame:(CGRect)frame;
+
+// 数据源
+    @property (nonatomic, strong) NSArray <NSString *>*items;
+    // 当前选中的索引
+    @property (nonatomic, assign) NSInteger selectedIndex;
+    
 @end
