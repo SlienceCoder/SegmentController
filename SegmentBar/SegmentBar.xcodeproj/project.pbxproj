@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A14F02C428BA8B982F28AE02 /* Pods_SegmentBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A54DF7D2F02C592F88B13DAE /* Pods_SegmentBar.framework */; };
 		DA1347211EDF0A6F003C2C62 /* SegmentBarConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1347201EDF0A6F003C2C62 /* SegmentBarConfig.m */; };
 		DAD55D9F1EDA773D0030BC10 /* NoDownLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD55D9E1EDA773D0030BC10 /* NoDownLoadView.m */; };
 		DAD55DA11EDA77540030BC10 /* NoDownLoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAD55DA01EDA77540030BC10 /* NoDownLoadView.xib */; };
@@ -20,9 +21,23 @@
 		DAEA35891EDA72AC006F5257 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEA35861EDA72AC006F5257 /* main.m */; };
 		DAEA358D1EDA733F006F5257 /* DownLoadListerMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEA358C1EDA733F006F5257 /* DownLoadListerMainVC.m */; };
 		E7672AA71EF7A221004076FF /* SegmentBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7672AA61EF7A221004076FF /* SegmentBarController.m */; };
+		E7D600791EF7BD3A00ED9117 /* DownLoadBaseTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D600781EF7BD3A00ED9117 /* DownLoadBaseTVC.m */; };
+		E7D6007C1EF7BD9600ED9117 /* DownLoadAlbumTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D6007B1EF7BD9600ED9117 /* DownLoadAlbumTVC.m */; };
+		E7D6007F1EF7BDB500ED9117 /* DownLoadVoiceTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D6007E1EF7BDB500ED9117 /* DownLoadVoiceTVC.m */; };
+		E7D600821EF7BDCA00ED9117 /* DownLoadingVoiceTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D600811EF7BDCA00ED9117 /* DownLoadingVoiceTVC.m */; };
+		E7D600891EF7C11F00ED9117 /* TodayFireMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D600881EF7C11F00ED9117 /* TodayFireMainVC.m */; };
+		E7D6008D1EF7C9BC00ED9117 /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D6008C1EF7C9BC00ED9117 /* SessionManager.m */; };
+		E7D600901EF7D19600ED9117 /* TodayFireVoiceListTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D6008F1EF7D19600ED9117 /* TodayFireVoiceListTVC.m */; };
+		E7D600931EF7D1B500ED9117 /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D600921EF7D1B500ED9117 /* CategoryModel.m */; };
+		E7D600961EF7D1CF00ED9117 /* DownLoadVoiceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D600951EF7D1CF00ED9117 /* DownLoadVoiceModel.m */; };
+		E7D6009D1EF7D23800ED9117 /* TodayFireVoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D6009B1EF7D23800ED9117 /* TodayFireVoiceCell.m */; };
+		E7D6009E1EF7D23800ED9117 /* TodayFireVoiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7D6009C1EF7D23800ED9117 /* TodayFireVoiceCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A54DF7D2F02C592F88B13DAE /* Pods_SegmentBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SegmentBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3D6D53A1809933664D8CC44 /* Pods-SegmentBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegmentBar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SegmentBar/Pods-SegmentBar.debug.xcconfig"; sourceTree = "<group>"; };
+		CA632F6C693015789D3ED989 /* Pods-SegmentBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegmentBar.release.xcconfig"; path = "Pods/Target Support Files/Pods-SegmentBar/Pods-SegmentBar.release.xcconfig"; sourceTree = "<group>"; };
 		DA13471F1EDF0A6F003C2C62 /* SegmentBarConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentBarConfig.h; sourceTree = "<group>"; };
 		DA1347201EDF0A6F003C2C62 /* SegmentBarConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentBarConfig.m; sourceTree = "<group>"; };
 		DAD55D9D1EDA773D0030BC10 /* NoDownLoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoDownLoadView.h; sourceTree = "<group>"; };
@@ -44,6 +59,27 @@
 		DAEA358C1EDA733F006F5257 /* DownLoadListerMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadListerMainVC.m; sourceTree = "<group>"; };
 		E7672AA51EF7A221004076FF /* SegmentBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentBarController.h; sourceTree = "<group>"; };
 		E7672AA61EF7A221004076FF /* SegmentBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentBarController.m; sourceTree = "<group>"; };
+		E7D600771EF7BD3A00ED9117 /* DownLoadBaseTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadBaseTVC.h; sourceTree = "<group>"; };
+		E7D600781EF7BD3A00ED9117 /* DownLoadBaseTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadBaseTVC.m; sourceTree = "<group>"; };
+		E7D6007A1EF7BD9600ED9117 /* DownLoadAlbumTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadAlbumTVC.h; sourceTree = "<group>"; };
+		E7D6007B1EF7BD9600ED9117 /* DownLoadAlbumTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadAlbumTVC.m; sourceTree = "<group>"; };
+		E7D6007D1EF7BDB500ED9117 /* DownLoadVoiceTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadVoiceTVC.h; sourceTree = "<group>"; };
+		E7D6007E1EF7BDB500ED9117 /* DownLoadVoiceTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadVoiceTVC.m; sourceTree = "<group>"; };
+		E7D600801EF7BDCA00ED9117 /* DownLoadingVoiceTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadingVoiceTVC.h; sourceTree = "<group>"; };
+		E7D600811EF7BDCA00ED9117 /* DownLoadingVoiceTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadingVoiceTVC.m; sourceTree = "<group>"; };
+		E7D600871EF7C11F00ED9117 /* TodayFireMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayFireMainVC.h; sourceTree = "<group>"; };
+		E7D600881EF7C11F00ED9117 /* TodayFireMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayFireMainVC.m; sourceTree = "<group>"; };
+		E7D6008B1EF7C9BC00ED9117 /* SessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionManager.h; sourceTree = "<group>"; };
+		E7D6008C1EF7C9BC00ED9117 /* SessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionManager.m; sourceTree = "<group>"; };
+		E7D6008E1EF7D19600ED9117 /* TodayFireVoiceListTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayFireVoiceListTVC.h; sourceTree = "<group>"; };
+		E7D6008F1EF7D19600ED9117 /* TodayFireVoiceListTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayFireVoiceListTVC.m; sourceTree = "<group>"; };
+		E7D600911EF7D1B500ED9117 /* CategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryModel.h; sourceTree = "<group>"; };
+		E7D600921EF7D1B500ED9117 /* CategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryModel.m; sourceTree = "<group>"; };
+		E7D600941EF7D1CF00ED9117 /* DownLoadVoiceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadVoiceModel.h; sourceTree = "<group>"; };
+		E7D600951EF7D1CF00ED9117 /* DownLoadVoiceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadVoiceModel.m; sourceTree = "<group>"; };
+		E7D6009A1EF7D23800ED9117 /* TodayFireVoiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayFireVoiceCell.h; sourceTree = "<group>"; };
+		E7D6009B1EF7D23800ED9117 /* TodayFireVoiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayFireVoiceCell.m; sourceTree = "<group>"; };
+		E7D6009C1EF7D23800ED9117 /* TodayFireVoiceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodayFireVoiceCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,17 +87,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A14F02C428BA8B982F28AE02 /* Pods_SegmentBar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11A0155BBB819180435432D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A54DF7D2F02C592F88B13DAE /* Pods_SegmentBar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DAEA35571EDA7120006F5257 = {
 			isa = PBXGroup;
 			children = (
 				DAEA35621EDA7120006F5257 /* SegmentBar */,
 				DAEA35611EDA7120006F5257 /* Products */,
+				DEA18BEB23255AB24FC2BC3C /* Pods */,
+				11A0155BBB819180435432D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +140,7 @@
 		DAEA357A1EDA7182006F5257 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E7D600831EF7C08900ED9117 /* TodayFire */,
 				DAEA357B1EDA72AC006F5257 /* DownLoaderListern */,
 				DAEA357F1EDA72AC006F5257 /* Other */,
 			);
@@ -114,6 +162,14 @@
 			children = (
 				DAEA358B1EDA733F006F5257 /* DownLoadListerMainVC.h */,
 				DAEA358C1EDA733F006F5257 /* DownLoadListerMainVC.m */,
+				E7D600771EF7BD3A00ED9117 /* DownLoadBaseTVC.h */,
+				E7D600781EF7BD3A00ED9117 /* DownLoadBaseTVC.m */,
+				E7D6007A1EF7BD9600ED9117 /* DownLoadAlbumTVC.h */,
+				E7D6007B1EF7BD9600ED9117 /* DownLoadAlbumTVC.m */,
+				E7D6007D1EF7BDB500ED9117 /* DownLoadVoiceTVC.h */,
+				E7D6007E1EF7BDB500ED9117 /* DownLoadVoiceTVC.m */,
+				E7D600801EF7BDCA00ED9117 /* DownLoadingVoiceTVC.h */,
+				E7D600811EF7BDCA00ED9117 /* DownLoadingVoiceTVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -138,6 +194,7 @@
 		DAEA357F1EDA72AC006F5257 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				E7D6008A1EF7C97400ED9117 /* Network */,
 				DAEA35801EDA72AC006F5257 /* Lib */,
 				DAEA35821EDA72AC006F5257 /* System */,
 			);
@@ -188,6 +245,66 @@
 			name = Resource;
 			sourceTree = "<group>";
 		};
+		DEA18BEB23255AB24FC2BC3C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B3D6D53A1809933664D8CC44 /* Pods-SegmentBar.debug.xcconfig */,
+				CA632F6C693015789D3ED989 /* Pods-SegmentBar.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E7D600831EF7C08900ED9117 /* TodayFire */ = {
+			isa = PBXGroup;
+			children = (
+				E7D600841EF7C0F200ED9117 /* Controller */,
+				E7D600851EF7C0F200ED9117 /* Model */,
+				E7D600861EF7C0F200ED9117 /* View */,
+			);
+			path = TodayFire;
+			sourceTree = "<group>";
+		};
+		E7D600841EF7C0F200ED9117 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E7D600871EF7C11F00ED9117 /* TodayFireMainVC.h */,
+				E7D600881EF7C11F00ED9117 /* TodayFireMainVC.m */,
+				E7D6008E1EF7D19600ED9117 /* TodayFireVoiceListTVC.h */,
+				E7D6008F1EF7D19600ED9117 /* TodayFireVoiceListTVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E7D600851EF7C0F200ED9117 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E7D600911EF7D1B500ED9117 /* CategoryModel.h */,
+				E7D600921EF7D1B500ED9117 /* CategoryModel.m */,
+				E7D600941EF7D1CF00ED9117 /* DownLoadVoiceModel.h */,
+				E7D600951EF7D1CF00ED9117 /* DownLoadVoiceModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E7D600861EF7C0F200ED9117 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E7D6009A1EF7D23800ED9117 /* TodayFireVoiceCell.h */,
+				E7D6009B1EF7D23800ED9117 /* TodayFireVoiceCell.m */,
+				E7D6009C1EF7D23800ED9117 /* TodayFireVoiceCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E7D6008A1EF7C97400ED9117 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E7D6008B1EF7C9BC00ED9117 /* SessionManager.h */,
+				E7D6008C1EF7C9BC00ED9117 /* SessionManager.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -195,9 +312,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DAEA35771EDA7120006F5257 /* Build configuration list for PBXNativeTarget "SegmentBar" */;
 			buildPhases = (
+				6B8EEFFB00DDC03732A98CC7 /* [CP] Check Pods Manifest.lock */,
 				DAEA355C1EDA7120006F5257 /* Sources */,
 				DAEA355D1EDA7120006F5257 /* Frameworks */,
 				DAEA355E1EDA7120006F5257 /* Resources */,
+				C726BA7CE978BFB2BB22B94B /* [CP] Embed Pods Frameworks */,
+				88F311CF73710C8B4E7A345D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,6 +367,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7D6009E1EF7D23800ED9117 /* TodayFireVoiceCell.xib in Resources */,
 				DAEA35881EDA72AC006F5257 /* Info.plist in Resources */,
 				DAEA35731EDA7120006F5257 /* LaunchScreen.storyboard in Resources */,
 				DAEA35701EDA7120006F5257 /* Assets.xcassets in Resources */,
@@ -257,18 +378,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6B8EEFFB00DDC03732A98CC7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		88F311CF73710C8B4E7A345D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SegmentBar/Pods-SegmentBar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C726BA7CE978BFB2BB22B94B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SegmentBar/Pods-SegmentBar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DAEA355C1EDA7120006F5257 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7D600791EF7BD3A00ED9117 /* DownLoadBaseTVC.m in Sources */,
+				E7D6007C1EF7BD9600ED9117 /* DownLoadAlbumTVC.m in Sources */,
 				DAD55DA41EDA7A370030BC10 /* UIView+Extension.m in Sources */,
 				DA1347211EDF0A6F003C2C62 /* SegmentBarConfig.m in Sources */,
 				DAEA35871EDA72AC006F5257 /* AppDelegate.m in Sources */,
+				E7D600821EF7BDCA00ED9117 /* DownLoadingVoiceTVC.m in Sources */,
 				DAEA35891EDA72AC006F5257 /* main.m in Sources */,
+				E7D600891EF7C11F00ED9117 /* TodayFireMainVC.m in Sources */,
 				DAEA358D1EDA733F006F5257 /* DownLoadListerMainVC.m in Sources */,
+				E7D600931EF7D1B500ED9117 /* CategoryModel.m in Sources */,
+				E7D6007F1EF7BDB500ED9117 /* DownLoadVoiceTVC.m in Sources */,
+				E7D600961EF7D1CF00ED9117 /* DownLoadVoiceModel.m in Sources */,
+				E7D6009D1EF7D23800ED9117 /* TodayFireVoiceCell.m in Sources */,
 				E7672AA71EF7A221004076FF /* SegmentBarController.m in Sources */,
 				DAD55D9F1EDA773D0030BC10 /* NoDownLoadView.m in Sources */,
+				E7D6008D1EF7C9BC00ED9117 /* SessionManager.m in Sources */,
+				E7D600901EF7D19600ED9117 /* TodayFireVoiceListTVC.m in Sources */,
 				DAD55DA71EDA7A760030BC10 /* SegmentBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +564,7 @@
 		};
 		DAEA35781EDA7120006F5257 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3D6D53A1809933664D8CC44 /* Pods-SegmentBar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DL8J4DD62Z;
@@ -397,6 +577,7 @@
 		};
 		DAEA35791EDA7120006F5257 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA632F6C693015789D3ED989 /* Pods-SegmentBar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DL8J4DD62Z;

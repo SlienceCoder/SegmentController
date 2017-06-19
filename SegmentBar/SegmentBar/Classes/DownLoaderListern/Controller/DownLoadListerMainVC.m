@@ -8,6 +8,9 @@
 
 #import "DownLoadListerMainVC.h"
 #import "SegmentBarController.h"
+#import "DownLoadAlbumTVC.h"
+#import "DownLoadVoiceTVC.h"
+#import "DownLoadingVoiceTVC.h"
 
 @interface DownLoadListerMainVC ()
 @property (nonatomic, weak) SegmentBarController *segmentBarVC;
@@ -57,11 +60,10 @@
  */
 - (void)setUpDataSource
 {
-    UITableViewController *vc1 = [[UITableViewController alloc] init];
-    vc1.view.backgroundColor = [UIColor purpleColor];
-    UITableViewController *vc2 = [[UITableViewController alloc] init];
-    UITableViewController *vc3 = [[UITableViewController alloc] init];
-    vc3.view.backgroundColor = [UIColor lightGrayColor];
+    DownLoadAlbumTVC *vc1 = [[DownLoadAlbumTVC alloc] init];
+    DownLoadVoiceTVC *vc2 = [[DownLoadVoiceTVC alloc] init];
+    DownLoadingVoiceTVC *vc3 = [[DownLoadingVoiceTVC alloc] init];
+    
     [self.segmentBarVC setUpWithItems:@[@"专辑", @"声音", @"下载中"] childvcs:@[vc1, vc2, vc3]];
     
     [self.segmentBarVC.segmentBar updateWithConfig:^(SegmentBarConfig *config) {
