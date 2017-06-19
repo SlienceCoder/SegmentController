@@ -19,6 +19,7 @@
 		DAEA35881EDA72AC006F5257 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAEA35851EDA72AC006F5257 /* Info.plist */; };
 		DAEA35891EDA72AC006F5257 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEA35861EDA72AC006F5257 /* main.m */; };
 		DAEA358D1EDA733F006F5257 /* DownLoadListerMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEA358C1EDA733F006F5257 /* DownLoadListerMainVC.m */; };
+		E7672AA71EF7A221004076FF /* SegmentBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7672AA61EF7A221004076FF /* SegmentBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		DAEA35861EDA72AC006F5257 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DAEA358B1EDA733F006F5257 /* DownLoadListerMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadListerMainVC.h; sourceTree = "<group>"; };
 		DAEA358C1EDA733F006F5257 /* DownLoadListerMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadListerMainVC.m; sourceTree = "<group>"; };
+		E7672AA51EF7A221004076FF /* SegmentBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentBarController.h; sourceTree = "<group>"; };
+		E7672AA61EF7A221004076FF /* SegmentBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +161,8 @@
 				DAD55DA61EDA7A760030BC10 /* SegmentBar.m */,
 				DA13471F1EDF0A6F003C2C62 /* SegmentBarConfig.h */,
 				DA1347201EDF0A6F003C2C62 /* SegmentBarConfig.m */,
+				E7672AA51EF7A221004076FF /* SegmentBarController.h */,
+				E7672AA61EF7A221004076FF /* SegmentBarController.m */,
 			);
 			path = SegmentBar;
 			sourceTree = "<group>";
@@ -262,6 +267,7 @@
 				DAEA35871EDA72AC006F5257 /* AppDelegate.m in Sources */,
 				DAEA35891EDA72AC006F5257 /* main.m in Sources */,
 				DAEA358D1EDA733F006F5257 /* DownLoadListerMainVC.m in Sources */,
+				E7672AA71EF7A221004076FF /* SegmentBarController.m in Sources */,
 				DAD55D9F1EDA773D0030BC10 /* NoDownLoadView.m in Sources */,
 				DAD55DA71EDA7A760030BC10 /* SegmentBar.m in Sources */,
 			);
