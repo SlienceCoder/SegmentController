@@ -42,23 +42,38 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bst-6Q-fVO">
-                        <rect key="frame" x="308" y="16" width="46" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="Button"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bst-6Q-fVO">
+                        <rect key="frame" x="324" y="16" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="D5A-Dp-4Jt"/>
+                            <constraint firstAttribute="height" constant="30" id="zmL-dN-H3V"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="cell_download"/>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqN-Ug-ucy">
-                        <rect key="frame" x="45" y="16" width="37" height="31"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="Button"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqN-Ug-ucy">
+                        <rect key="frame" x="30" y="12" width="40" height="40"/>
+                        <color key="backgroundColor" red="0.94515132904052734" green="0.57672220468521118" blue="0.97645831108093262" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="9gN-H1-Z8y"/>
+                            <constraint firstAttribute="height" constant="40" id="eh5-lF-bEM"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="cell_sound_play_n"/>
                     </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="QoX-tO-pvy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="CHx-XV-P0B"/>
+                    <constraint firstItem="tqN-Ug-ucy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="1" id="H0h-he-sZ2"/>
+                    <constraint firstAttribute="trailing" secondItem="bst-6Q-fVO" secondAttribute="trailing" constant="16" id="Tlm-9p-vHq"/>
+                    <constraint firstItem="tqN-Ug-ucy" firstAttribute="leading" secondItem="QoX-tO-pvy" secondAttribute="trailing" id="YEG-A5-1Wl"/>
                     <constraint firstItem="QoX-tO-pvy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lkR-CC-dqD"/>
+                    <constraint firstItem="bst-6Q-fVO" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="r8A-dn-5m7"/>
                 </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="59" y="63"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="cell_download" width="48" height="48"/>
+        <image name="cell_sound_play_n" width="38" height="38"/>
+    </resources>
 </document>
