@@ -20,6 +20,10 @@
 		DAEA35881EDA72AC006F5257 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAEA35851EDA72AC006F5257 /* Info.plist */; };
 		DAEA35891EDA72AC006F5257 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEA35861EDA72AC006F5257 /* main.m */; };
 		DAEA358D1EDA733F006F5257 /* DownLoadListerMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEA358C1EDA733F006F5257 /* DownLoadListerMainVC.m */; };
+		E758A3981EF8CA21000BAB93 /* DownLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E758A3911EF8CA21000BAB93 /* DownLoader.m */; };
+		E758A3991EF8CA21000BAB93 /* DownLoaderFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E758A3931EF8CA21000BAB93 /* DownLoaderFileTool.m */; };
+		E758A39A1EF8CA21000BAB93 /* DownLoaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E758A3951EF8CA21000BAB93 /* DownLoaderManager.m */; };
+		E758A39B1EF8CA21000BAB93 /* NSString+Download.m in Sources */ = {isa = PBXBuildFile; fileRef = E758A3971EF8CA21000BAB93 /* NSString+Download.m */; };
 		E7672AA71EF7A221004076FF /* SegmentBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7672AA61EF7A221004076FF /* SegmentBarController.m */; };
 		E7D600791EF7BD3A00ED9117 /* DownLoadBaseTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D600781EF7BD3A00ED9117 /* DownLoadBaseTVC.m */; };
 		E7D6007C1EF7BD9600ED9117 /* DownLoadAlbumTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D6007B1EF7BD9600ED9117 /* DownLoadAlbumTVC.m */; };
@@ -57,6 +61,14 @@
 		DAEA35861EDA72AC006F5257 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DAEA358B1EDA733F006F5257 /* DownLoadListerMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadListerMainVC.h; sourceTree = "<group>"; };
 		DAEA358C1EDA733F006F5257 /* DownLoadListerMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadListerMainVC.m; sourceTree = "<group>"; };
+		E758A3901EF8CA21000BAB93 /* DownLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoader.h; sourceTree = "<group>"; };
+		E758A3911EF8CA21000BAB93 /* DownLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoader.m; sourceTree = "<group>"; };
+		E758A3921EF8CA21000BAB93 /* DownLoaderFileTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoaderFileTool.h; sourceTree = "<group>"; };
+		E758A3931EF8CA21000BAB93 /* DownLoaderFileTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoaderFileTool.m; sourceTree = "<group>"; };
+		E758A3941EF8CA21000BAB93 /* DownLoaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoaderManager.h; sourceTree = "<group>"; };
+		E758A3951EF8CA21000BAB93 /* DownLoaderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoaderManager.m; sourceTree = "<group>"; };
+		E758A3961EF8CA21000BAB93 /* NSString+Download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Download.h"; sourceTree = "<group>"; };
+		E758A3971EF8CA21000BAB93 /* NSString+Download.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Download.m"; sourceTree = "<group>"; };
 		E7672AA51EF7A221004076FF /* SegmentBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentBarController.h; sourceTree = "<group>"; };
 		E7672AA61EF7A221004076FF /* SegmentBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentBarController.m; sourceTree = "<group>"; };
 		E7D600771EF7BD3A00ED9117 /* DownLoadBaseTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadBaseTVC.h; sourceTree = "<group>"; };
@@ -204,6 +216,7 @@
 		DAEA35801EDA72AC006F5257 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				E758A38F1EF8C9CA000BAB93 /* DownLoad */,
 				DAEA35811EDA72AC006F5257 /* SegmentBar */,
 			);
 			path = Lib;
@@ -252,6 +265,21 @@
 				CA632F6C693015789D3ED989 /* Pods-SegmentBar.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E758A38F1EF8C9CA000BAB93 /* DownLoad */ = {
+			isa = PBXGroup;
+			children = (
+				E758A3901EF8CA21000BAB93 /* DownLoader.h */,
+				E758A3911EF8CA21000BAB93 /* DownLoader.m */,
+				E758A3921EF8CA21000BAB93 /* DownLoaderFileTool.h */,
+				E758A3931EF8CA21000BAB93 /* DownLoaderFileTool.m */,
+				E758A3941EF8CA21000BAB93 /* DownLoaderManager.h */,
+				E758A3951EF8CA21000BAB93 /* DownLoaderManager.m */,
+				E758A3961EF8CA21000BAB93 /* NSString+Download.h */,
+				E758A3971EF8CA21000BAB93 /* NSString+Download.m */,
+			);
+			path = DownLoad;
 			sourceTree = "<group>";
 		};
 		E7D600831EF7C08900ED9117 /* TodayFire */ = {
@@ -434,13 +462,16 @@
 				E7D600791EF7BD3A00ED9117 /* DownLoadBaseTVC.m in Sources */,
 				E7D6007C1EF7BD9600ED9117 /* DownLoadAlbumTVC.m in Sources */,
 				DAD55DA41EDA7A370030BC10 /* UIView+Extension.m in Sources */,
+				E758A39B1EF8CA21000BAB93 /* NSString+Download.m in Sources */,
 				DA1347211EDF0A6F003C2C62 /* SegmentBarConfig.m in Sources */,
+				E758A3991EF8CA21000BAB93 /* DownLoaderFileTool.m in Sources */,
 				DAEA35871EDA72AC006F5257 /* AppDelegate.m in Sources */,
 				E7D600821EF7BDCA00ED9117 /* DownLoadingVoiceTVC.m in Sources */,
 				DAEA35891EDA72AC006F5257 /* main.m in Sources */,
 				E7D600891EF7C11F00ED9117 /* TodayFireMainVC.m in Sources */,
 				DAEA358D1EDA733F006F5257 /* DownLoadListerMainVC.m in Sources */,
 				E7D600931EF7D1B500ED9117 /* CategoryModel.m in Sources */,
+				E758A3981EF8CA21000BAB93 /* DownLoader.m in Sources */,
 				E7D6007F1EF7BDB500ED9117 /* DownLoadVoiceTVC.m in Sources */,
 				E7D600961EF7D1CF00ED9117 /* DownLoadVoiceModel.m in Sources */,
 				E7D6009D1EF7D23800ED9117 /* TodayFireVoiceCell.m in Sources */,
@@ -448,6 +479,7 @@
 				DAD55D9F1EDA773D0030BC10 /* NoDownLoadView.m in Sources */,
 				E7D6008D1EF7C9BC00ED9117 /* SessionManager.m in Sources */,
 				E7D600901EF7D19600ED9117 /* TodayFireVoiceListTVC.m in Sources */,
+				E758A39A1EF8CA21000BAB93 /* DownLoaderManager.m in Sources */,
 				DAD55DA71EDA7A760030BC10 /* SegmentBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

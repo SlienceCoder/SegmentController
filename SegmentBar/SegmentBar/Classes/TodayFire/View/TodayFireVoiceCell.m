@@ -8,6 +8,7 @@
 
 #import "TodayFireVoiceCell.h"
 #import <SDWebImage/UIButton+WebCache.h>
+#import "DownLoaderManager.h"
 
 @interface TodayFireVoiceCell ()
 @property (weak, nonatomic) IBOutlet UILabel *sortNumLab;
@@ -33,11 +34,7 @@ static NSString *const ID = @"TodayFireVoiceCell";
     return cell;
 }
 
-- (IBAction)downLoad:(id)sender {
-    if (self.state == TodayFireVoiceCellStateWaitDownLoad) {
-        NSLog(@"下载");
-    }
-}
+
 - (IBAction)playOrPause:(UIButton *)sender {
     sender.selected = !sender.selected;
     
@@ -50,7 +47,7 @@ static NSString *const ID = @"TodayFireVoiceCell";
 {
     _state = state;
     switch (state) {
-        case TodayFireVoiceCellStateDownLoaded:
+        case TodayFireVoiceCellStateWaitDownLoad:
             NSLog(@"等待下载");
             [self removeRotationAnimation];
             [self.downLoadBtn setImage:[UIImage imageNamed:@"cell_download"] forState:UIControlStateNormal];
@@ -60,7 +57,7 @@ static NSString *const ID = @"TodayFireVoiceCell";
             [self.downLoadBtn setImage:[UIImage imageNamed:@"cell_download_loading"] forState:UIControlStateNormal];
             [self addRotationAnimation];
             break;
-        case TodayFireVoiceCellStateWaitDownLoad:
+        case TodayFireVoiceCellStateDownLoaded:
             NSLog(@"下载完毕");
             [self removeRotationAnimation];
             [self.downLoadBtn setImage:[UIImage imageNamed:@"cell_downloaded"] forState:UIControlStateNormal];
@@ -82,6 +79,25 @@ static NSString *const ID = @"TodayFireVoiceCell";
     
     [self.palyOrPauseBtn sd_setBackgroundImageWithURL:[NSURL URLWithString:voiceModel.coverSmall] forState:UIControlStateNormal];
     self.sortNumLab.text = [NSString stringWithFormat:@"%zd",voiceModel.sortNum];
+    
+    
+    
+    // 一定要注意动态的获取下载状态
+    // 因为cell重用, 所以必须准确的获取url对应的下载状态
+    NSURL *url = [NSURL URLWithString:self.voiceModel.playPathAacv164];
+    DownLoader *downLoader = [[DownLoaderManager shareManager] getDownLoaderWithURL:url];
+    DownLoadState state = downLoader.states;
+
+    if (state == DownLoadStateDownLoading) {
+        self.state = TodayFireVoiceCellStateDownLoading;
+    }else if(state == DownLoadStateSuccess || [DownLoader downLoadedFileWithURL:url].length > 0)
+    {
+        self.state = TodayFireVoiceCellStateDownLoaded;
+    }else {
+        self.state = TodayFireVoiceCellStateWaitDownLoad;
+    }
+
+    
 }
 
 - (void)addRotationAnimation
@@ -115,6 +131,8 @@ static NSString *const ID = @"TodayFireVoiceCell";
     self.palyOrPauseBtn.layer.borderColor = [UIColor whiteColor].CGColor;
     self.palyOrPauseBtn.layer.cornerRadius = 20;
     
+    // . 添加监听下载状态的通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(downLoadStateChange:) name:kDownLoadURLOrStateChangeNotification object:nil];
     
 }
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
@@ -136,6 +154,41 @@ static NSString *const ID = @"TodayFireVoiceCell";
 
 }
 
+
+#pragma mark --下载功能集成
+// 当用户点击下载按钮时, 触发的动作, 注意判断按钮当前状态
+- (IBAction)downLoad:(id)sender {
+    if (self.state == TodayFireVoiceCellStateWaitDownLoad) {
+        NSLog(@"下载");
+        
+        NSURL *url = [NSURL URLWithString:self.voiceModel.playPathAacv164];
+        [[DownLoaderManager shareManager] downLoadWithURL:url];
+        
+    }
+}
+
+// 下载状态变更时候调用
+- (void)downLoadStateChange:(NSNotification *)notice
+{
+    NSDictionary *downDic = notice.userInfo;
+    NSURL *url = downDic[@"downLoadURL"];
+    
+    NSURL *currentUrl = [NSURL URLWithString:self.voiceModel.playPathAacv164];
+    
+    if ([url isEqual:currentUrl]) {
+        DownLoadState state = [downDic[@"downLoadState"] integerValue];
+        
+        if (state == DownLoadStateDownLoading) {
+            self.state = TodayFireVoiceCellStateDownLoading;
+        }else if(state == DownLoadStateSuccess || [DownLoader downLoadedFileWithURL:url].length > 0)
+        {
+            self.state = TodayFireVoiceCellStateDownLoaded;
+        }else {
+            self.state = TodayFireVoiceCellStateWaitDownLoad;
+        }
+    }
+
+}
 
 
 @end
