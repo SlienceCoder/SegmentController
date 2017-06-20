@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TodayFireVoiceListTVC : UITableViewController
-
+@property (nonatomic, copy) NSString *loadKey;
 @end

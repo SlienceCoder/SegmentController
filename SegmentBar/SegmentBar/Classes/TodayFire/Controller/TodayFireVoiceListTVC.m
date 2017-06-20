@@ -8,20 +8,63 @@
 
 #import "TodayFireVoiceListTVC.h"
 
-@interface TodayFireVoiceListTVC ()
+#import "SessionManager.h"
+#import <MJExtension/MJExtension.h>
+#import "DownLoadVoiceModel.h"
 
+#import "TodayFireVoiceCell.h"
+
+#define kBaseUrl @"http://mobile.ximalaya.com/"
+
+@interface TodayFireVoiceListTVC ()
+@property (nonatomic, strong) NSArray<DownLoadVoiceModel *> *voiceMs;
+
+@property (nonatomic, strong) SessionManager *sessionManager;
 @end
 
 @implementation TodayFireVoiceListTVC
 
+- (void)setVoiceMs:(NSArray<DownLoadVoiceModel *> *)voiceMs
+{
+    _voiceMs = voiceMs;
+    [self.tableView reloadData];
+}
+
+- (SessionManager *)sessionManager {
+    if (!_sessionManager) {
+        _sessionManager = [[SessionManager alloc] init];
+    }
+    return _sessionManager;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.rowHeight = 80;
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    [self loadData];
+}
+
+- (void)loadData
+{
+    __weak typeof(self) weakSelf = self;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSString *url = [NSString stringWithFormat:@"%@%@", kBaseUrl, @"mobile/discovery/v2/rankingList/track"];
+    NSDictionary *param = @{
+                            @"device": @"iPhone",
+                            @"key": self.loadKey,
+                            @"pageId": @"1",
+                            @"pageSize": @"30"
+                            };
+    
+    [self.sessionManager request:RequestTypeGet url:url parameter:param resultBlock:^(id responseObject, NSError *error) {
+        NSMutableArray <DownLoadVoiceModel *>*voiceyMs = [DownLoadVoiceModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        
+        weakSelf.voiceMs = voiceyMs;
+
+    }];
+    
+   
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,68 +74,34 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return self.voiceMs.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    TodayFireVoiceCell *cell = [TodayFireVoiceCell cellWithTableView:tableView];
     
-    // Configure the cell...
+    DownLoadVoiceModel *model = self.voiceMs[indexPath.row];
+    model.sortNum = indexPath.row + 1;
+    
+    cell.voiceModel = model;
     
     return cell;
-}
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    DownLoadVoiceModel *model = self.voiceMs[indexPath.row];
+    
+    NSLog(@"跳转到播放器界面进行播放--%@--", model.title);
+    
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

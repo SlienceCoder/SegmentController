@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DownLoadVoiceModel.h"
+
+typedef NS_ENUM(NSUInteger, TodayFireVoiceCellState){
+    TodayFireVoiceCellStateWaitDownLoad,
+    TodayFireVoiceCellStateDownLoading,
+    TodayFireVoiceCellStateDownLoaded
+} ;
 
 @interface TodayFireVoiceCell : UITableViewCell
++ (instancetype)cellWithTableView:(UITableView *)tableView;
 
+@property (nonatomic, strong) DownLoadVoiceModel *voiceModel;
 @end

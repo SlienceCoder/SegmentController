@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface CategoryModel : NSObject
+@property (nonatomic, assign) NSInteger id;
+@property (nonatomic, copy) NSString *key;
+@property (nonatomic, copy) NSString *name;
 
 @end
